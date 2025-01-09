@@ -11,7 +11,7 @@ namespace Projet01
             float RENDU = 0.0f;
             float monnaie = 0.0f;
 
-            //AFFICHAGE DU MENU
+            //AFFICHAGE DU MENU.
 
             Console.WriteLine(" __________________________________");
             Console.WriteLine("|          MACHINE À CAFÉ          |");
@@ -40,7 +40,7 @@ namespace Projet01
             Console.WriteLine("|__________________________________|");
             Console.Write(" ---> ");
 
-            // ENTRÉES : LE CHOIX DE L'UTILISATEUR. OK
+            // ENTRÉES : LE CHOIX DE L'UTILISATEUR.
 
             if (!int.TryParse(Console.ReadLine(), out choix) || choix < 1 || choix > 17)
             {
@@ -48,12 +48,12 @@ namespace Projet01
                 return;
             }
 
-            //DEFINITION DES PRIX DES CAFES OK
+            //DEFINITION DES PRIX DES CAFES.
 
             float[] prixCafes = { 2.0f, 4.0f, 2.0f, 5.0f, 5.0f, 6.0f, 6.0f, 5.0f, 5.0f, 5.0f, 4.0f, 5.0f, 7.0f, 6.0f, 5.0f, 5.0f, 7.0f };
             float prixCafe = prixCafes[choix - 1];
 
-            //ENTRÉES : LA MONNAIE
+            //ENTRÉES : LA MONNAIE.
 
             Console.WriteLine("Entrez la monnaie ");
             Console.Write(" ---> ");
@@ -64,7 +64,7 @@ namespace Projet01
                 return;
             }
 
-            // Verification si le paiement est correct
+            // VÉRIFICATION DU PAIEMENT.
 
             if (monnaie < prixCafe)
             {
@@ -72,10 +72,10 @@ namespace Projet01
                 return;
             }
 
-            // Calcul  du change 
+            // CALCUL DU CHANGE. 
             RENDU = monnaie - prixCafe;
 
-            //PRÉPARATION CAFÉ EN 10 S
+            //PRÉPARATION CAFÉ EN 10 S.
             Console.Clear();
             Console.Write("Préparation du café en cours");
             Thread.Sleep(1000);
@@ -87,7 +87,7 @@ namespace Projet01
             Thread.Sleep(10000);
 
 
-            //AFFICHER LA MONNAIE RENDUE ET SERVIR CAFÉ
+            //AFFICHER LA MONNAIE RENDUE ET SERVIR CAFÉ.
             Console.WriteLine();
             Console.WriteLine($"ARGENT RENDU : {RENDU:0.00} $");
             Console.WriteLine(" __________________");
@@ -126,18 +126,18 @@ namespace Projet01
                     break;
                 case 9:
                     Console.WriteLine("|CAPPUCCINO|");
-                    Console.WriteLine("|ALLEGE    |");
+                    Console.WriteLine("|ALLÉGÉ    |");
                     break;
                 case 10:
-                    Console.WriteLine("|CAFE     |");
-                    Console.WriteLine("|AMERICAIN|");
+                    Console.WriteLine("|CAFÉ     |");
+                    Console.WriteLine("|AMÉRICAIN|");
                     break;
                 case 11:
-                    Console.WriteLine("|CAFE |");
-                    Console.WriteLine("|GLACE|");
+                    Console.WriteLine("|CAFÉ |");
+                    Console.WriteLine("|GLACÉ|");
                     break;
                 case 12:
-                    Console.WriteLine("|CAFE |");
+                    Console.WriteLine("|CAFÉ |");
                     Console.WriteLine("|BREVE|");
                     break;
                 case 13:
@@ -151,23 +151,23 @@ namespace Projet01
                     Console.WriteLine("|OEIL AU BEURRE NOIR|");
                     break;
                 case 16:
-                    Console.WriteLine("|CAFE |");
+                    Console.WriteLine("|CAFÉ |");
                     Console.WriteLine("|LATTE|");
                     break;
                 case 17:
-                    Console.WriteLine("|CAFE |");
+                    Console.WriteLine("|CAFÉ |");
                     Console.WriteLine("| CON |");
                     Console.WriteLine("|LECHE|");
                     break;
             }
             Console.WriteLine("|________|");
 
-            //FIN ACHAT
+            //FIN ACHAT.
 
             Console.WriteLine();
             Console.WriteLine("À LA PROCHAINE !");
 
-            //LISTE DES PRIX DES CAFÉS À RESPECTER
+            //LISTE DES PRIX DES CAFÉS À RESPECTER.
             /*
              EXPRESSO : 2 $
              DOUBLE EXPRESSO : 4 $
