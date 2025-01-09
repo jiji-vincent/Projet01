@@ -187,6 +187,8 @@ namespace Projet01
              CAFÉ LATTE : 5 $
              CAFÉ CON LECHE : 7 $
              */
+
+            // Par : Jennie-Ann Vincent
         }
     }
 }
